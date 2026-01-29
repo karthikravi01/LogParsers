@@ -14,6 +14,7 @@ with DltReader("example.dlt") as r:
 import logging
 from pydlt import DltFileReader
 from datetime import datetime
+from pathlib import Path
 
 logging.basicConfig(
     level=logging.INFO,
@@ -21,12 +22,13 @@ logging.basicConfig(
 )
 
 logger = logging.getLogger(__name__)
-#TODO : can be switched to UUID(need to check)
+# TODO : can be switched to UUID(need to check)
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S") 
 
 
 input_file = "./input/TCA_ECU1_UXC_HPA_SGA_DHU_2026-01-20T14_18-17.592161Z.dlt"
-output_file = f"./output/dlt_{timestamp}.log"
+Path("output").mkdir(exist_ok=True)
+output_file = f"output/dlt_{timestamp}.log"
 
 logger.info("Starting DLT conversion: %s → %s", input_file, output_file)
 
