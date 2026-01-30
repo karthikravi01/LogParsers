@@ -1,0 +1,17 @@
+1. Create a parser for:
+ - Dlt (Done)
+ - Pcap (In progress)
+ - Coredumps (In progress)
+
+
+ 2. Currenly the codebase is using virtual env, plan to make it dockerized so that it can be a seprate module.
+
+
+
+
+ 
+Questions:
+    1. Pcap:
+        1. what format to output the parsed data (.log, .csv, .json, etc)?
+        2. what fields to extract from the pcap packets?
+    2. 
