@@ -4,6 +4,7 @@
  - Coredumps (In progress)
 
  2. Currenly the codebase is using virtual env, plan to make it dockerized so that it can be a seprate module.
+ 3. Make the outputs to .json(friendly for vector DB)
 
 
 
@@ -19,3 +20,5 @@ Questions:
         1. In Dlt or other types of logs, is it recommeed to use some kind of batch processing 
         (like 10 at a time or someing like that). Right now it processes all the logs at once in input folder
         (might encounter time out?)
+    3.Coredumps
+        1. 
